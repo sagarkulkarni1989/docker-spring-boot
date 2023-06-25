@@ -46,7 +46,7 @@ pipeline {
         stage ('Helm Deploy') {
           steps {
             script {
-                sh "helm upgrade first --install my-aks-charts --namespace helm-deployment --set image.tag=$BUILD_NUMBER"
+                sh "helm upgrade first --install mychart --namespace helm-deployment --set image.tag=$BUILD_NUMBER"
                 }
             }
         }
